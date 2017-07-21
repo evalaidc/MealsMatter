@@ -4,10 +4,10 @@ angular
     "ngResource"
   ])
   .config(["$stateProvider", RouterFunction])
-  .factory("SchoolYearFactory", [
-    "$http",
-    SchoolYearFactoryFunction
-  ])
+  // .factory("SchoolYearFactory", [
+  //   "$http",
+  //   SchoolYearFactoryFunction
+  // ])
   .controller("LunchIndexCtrler", [
     "$http",
     "$scope",
@@ -27,20 +27,17 @@ function RouterFunction($stateProvider){
 }
 
 
-function SchoolYearFactoryFunction($http){
-  // var obj = {};
-  //
-  // obj.getData = function(){
-  //   return   $http.get('https://data.maryland.gov/resource/7dst-j5if.json?$select=school_year');
-  // }
-
-}
 
 function LunchIndexControllerFunction($http, $scope){
   $http.get(`https://data.maryland.gov/resource/7dst-j5if.json?$select=school_year`)
- .then(function(res){
-   $scope.school_years = res.data.map(obj => obj.school_year)
- }, function(err){
-   console.log(err)
- })
+   .then(function(res){
+     $scope.school_years = res.data.map(obj => obj.school_year)
+   }, function(err){
+     console.log(err)
+   });
+}
+
+function getSelected(){
+  var selected = $("#myselect").val()
+  console.log(selected)
 }

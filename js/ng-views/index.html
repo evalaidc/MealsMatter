@@ -1,4 +1,7 @@
 <h1> Hello World </h1>
-<select id='myselect' >
-  <option data-ng-repeat='range in school_years' value={{range}}> {{range}} </option>
-</select>
+  <p>Choose a School Year:
+    <select id='myselect' >
+      <option data-ng-repeat='range in school_years' value={{range}}> {{range}} </option>
+    </select>
+    <button type="button" onclick="getSelected()">Choose</button>
+  </p>
