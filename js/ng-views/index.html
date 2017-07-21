@@ -1,7 +1,14 @@
 <h1> Hello World </h1>
+<!-- options for choosing a school year from dataset -->
   <p>Choose a School Year:
     <select id='myselect' >
       <option data-ng-repeat='range in school_years' value={{range}}> {{range}} </option>
     </select>
-    <button type="button" onclick="getSelected()">Choose</button>
+    <button type="button" onclick="getSelected()" ng-click="showgraph = !showgraph">Choose</button>
   </p>
+  <div data-ng-show="showgraph">
+      <p> {{year_data[0].school_year}}</p>
+      <div class="counter c1" data-count="150">0</div>
+      <div class="counter c2" data-count="85">0</div>
+      <div class="counter c3" data-count="2200">0</div>
+   </div>

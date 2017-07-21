@@ -29,6 +29,7 @@ function RouterFunction($stateProvider){
 
 
 function LunchIndexControllerFunction($http, $scope){
+  self = $scope
   $http.get(`https://data.maryland.gov/resource/7dst-j5if.json?$select=school_year`)
    .then(function(res){
      $scope.school_years = res.data.map(obj => obj.school_year)
@@ -39,5 +40,45 @@ function LunchIndexControllerFunction($http, $scope){
 
 function getSelected(){
   var selected = $("#myselect").val()
-  console.log(selected)
+  getYearData(selected)
+}
+
+function getYearData(sel ){
+  console.log(sel)
+  $.ajax({
+    url:`https://data.maryland.gov/resource/7dst-j5if.json?school_year=${sel}`,
+    success: function(res){
+              self.year_data = res
+             console.log(self.year_data)
+           }
+  })
+  counters()
+
+}
+
+// code for the counters
+function counters() {
+$('.counter').each(function() {
+  var num = $(this),
+      countTo = num.attr('data-count');
+      console.log("hello")
+  $({ countNum: num.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 3000,
+    easing:'linear',
+    step: function() {
+      num.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      num.text(this.countNum);
+      //alert('finished');
+    }
+
+  });
+
+});
 }
