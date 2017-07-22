@@ -8,9 +8,10 @@ angular
   //   "$http",
   //   SchoolYearFactoryFunction
   // ])
-  .controller("LunchIndexCtrler", [
-    "$http",
-    "$scope",
+  .controller("AboutCtrl",[
+    aboutControllerFunction
+  ])
+  .controller("LunchIndexCtrl", [
     LunchIndexControllerFunction
   ])
 
@@ -18,12 +19,21 @@ angular
 
 function RouterFunction($stateProvider){
   $stateProvider
+  .state("about", {
+    url: "/about",
+    templateUrl: "js/ng-views/about.html",
+    controller: ""
+  })
   .state("lunchIndex",{
     url: "/mdlunches",
     templateUrl: "js/ng-views/index.html",
-    controller: "LunchIndexCtrler",
+    controller: "LunchIndexCtrl",
     controllerAs: "vm"
   })
+}
+
+function aboutControllerFunction(){
+  
 }
 
 
