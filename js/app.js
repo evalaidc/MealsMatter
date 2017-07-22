@@ -4,14 +4,13 @@ angular
     "ngResource"
   ])
   .config(["$stateProvider", RouterFunction])
-  // .factory("SchoolYearFactory", [
-  //   "$http",
-  //   SchoolYearFactoryFunction
-  // ])
+
   .controller("AboutCtrl",[
     aboutControllerFunction
   ])
   .controller("LunchIndexCtrl", [
+    "$http",
+    "$scope",
     LunchIndexControllerFunction
   ])
 
@@ -22,7 +21,8 @@ function RouterFunction($stateProvider){
   .state("about", {
     url: "/about",
     templateUrl: "js/ng-views/about.html",
-    controller: ""
+    controller: "AboutCtrl",
+    controllerAs: "vm"
   })
   .state("lunchIndex",{
     url: "/mdlunches",
@@ -33,7 +33,7 @@ function RouterFunction($stateProvider){
 }
 
 function aboutControllerFunction(){
-  
+
 }
 
 
