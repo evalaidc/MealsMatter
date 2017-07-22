@@ -68,7 +68,7 @@ $('.counter').each(function() {
 
   {
 
-    duration: 3000,
+    duration: 2300,
     easing:'linear',
     step: function() {
       num.text(Math.floor(this.countNum));
