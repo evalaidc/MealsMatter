@@ -10,16 +10,16 @@
   </p>
   <div data-ng-show="showgraph">
       <!-- <p> {{year_data[0].school_year}}</p> -->
-      <div class='counterbox'>
-        <div id="c1">
-          <h4> Students Eligible </h4>
+      <div class='countersContainer'>
+        <div class='counterbox' id="c1">
+          <h4> Number of Students Eligible </h4>
           <div class="counter" data-count={{year_data[0].students_eligible_for_free_and_reduced_meals}}>0</div>
         </div>
-        <div id="c2">
+        <div class='counterbox' id="c2">
           <h4> Number of Breakfasts Provided </h4>
           <div class="counter" data-count={{year_data[0].free_reduced_school_breakfast_participation}}>0</div>
         </div>
-        <div id="c3">
+        <div class='counterbox' id="c3">
           <h4> Number of Lunches Provided </h4>
           <div class="counter" data-count={{year_data[0].free_reduced_school_lunch_participation}}>0</div>
         </div>
