@@ -61,7 +61,6 @@ function counters() {
 $('.counter').each(function() {
   var num = $(this),
       countTo = num.attr('data-count');
-      console.log("hello")
   $({ countNum: num.text()}).animate({
     countNum: countTo
   },

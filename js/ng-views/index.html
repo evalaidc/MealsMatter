@@ -1,4 +1,4 @@
-<h1> Hello World </h1>
+<h1> Maryland Meals</h1>
 <!-- options for choosing a school year from dataset -->
   <p>Choose a School Year:
     <select id='myselect' >
@@ -8,7 +8,18 @@
   </p>
   <div data-ng-hide="showgraph">
       <!-- <p> {{year_data[0].school_year}}</p> -->
-      <div class="counter c1" data-count={{year_data[0].free_reduced_school_breakfast_participation}}>0</div>
-      <div class="counter c2" data-count={{year_data[0].free_reduced_school_lunch_participation}}>0</div>
-      <div class="counter c3" data-count={{year_data[0].students_eligible_for_free_and_reduced_meals}}>0</div>
+      <div class='counterbox'>
+        <div id="c1">
+          <h4> Eligible </h4>
+          <div class="counter" data-count={{year_data[0].students_eligible_for_free_and_reduced_meals}}>0</div>
+        </div>
+        <div id="c2">
+          <h4> Breakfast Provided </h4>
+          <div class="counter" data-count={{year_data[0].free_reduced_school_breakfast_participation}}>0</div>
+        </div>
+        <div id="c3">
+          <h4> Lunch Provided </h4>
+          <div class="counter" data-count={{year_data[0].free_reduced_school_lunch_participation}}>0</div>
+        </div>
+      </div>
    </div>

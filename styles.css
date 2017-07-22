@@ -1,3 +1,8 @@
+.counterbox {
+  display: flex;
+  flex-wrap:wrap;
+}
+
 .counter {
   display: table-cell;
   margin:1.5%;
