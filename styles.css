@@ -1,6 +1,7 @@
 .countersContainer {
   display: flex;
   flex-wrap:wrap;
+  margin: 20px auto;
 }
 
 .counter {
@@ -25,8 +26,8 @@ body {
 }
 
 .counterbox {
-  margin: 0 10px;
-  width: 30%;
+  margin: 0 15px;
+  width: 230px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -44,7 +45,7 @@ body {
 button {
 
 }
-
+/* allows for video to resize according to screen size */
 .videoContainer {
     position: relative;
     width: 100%;
