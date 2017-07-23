@@ -17,19 +17,19 @@ angular
 function RouterFunction($stateProvider){
   $stateProvider
   .state("about", {
-    url: "/about",
+    url: "MealsMatter/#/about",
     templateUrl: "js-angular/ng-views/about.html",
     controller: "AboutCtrl",
     controllerAs: "vm"
   })
   .state("lunchIndex",{
-    url: "/mdfacts",
+    url: "MealsMatter/#/mdfacts",
     templateUrl: "js-angular/ng-views/index.html",
     controller: "LunchIndexCtrl",
     controllerAs: "vm"
   })
   .state("home", {
-    url: "/",
+    url: "MealsMatter/",
     templateUrl: "js-angular/ng-views/home.html"
   })
 
