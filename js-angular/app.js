@@ -54,12 +54,10 @@ function LunchIndexControllerFunction($http, $scope){
 
   // Pulling in specific data according to year
     function getYearData(sel ){
-      console.log(sel)
       $.ajax({
         url:`https://data.maryland.gov/resource/7dst-j5if.json?school_year=${sel}`,
         success: function(res){
                   self.year_data = res
-                 console.log(self.year_data)
                }
       })
       counters()
@@ -84,7 +82,6 @@ function LunchIndexControllerFunction($http, $scope){
         },
         complete: function() {
           num.text(this.countNum);
-          //alert('finished');
         }
 
       });
