@@ -11,7 +11,7 @@
 
 ## How to start environment for Developers
   Simply go into folder and type: hs
-  
+
 ## Technologies
 Built using Angularjs, twitter bootstrap, jQuery, AJAX, $https
 
