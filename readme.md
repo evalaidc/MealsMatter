@@ -2,13 +2,18 @@
   Here to bring awareness of free and reduced lunches by providing the documentation on who and how to get reduced lunch. By using Maryland's statistics, we can show the school year numbers at which people have used the program to show others they are not alone.
 
 ## User Stories
+- The user should be able to navigate between pages easily.
+- The user should be able to choose an option of school year data to look at and see the data from that particular period.
+- The user should be able to find the form to see their eligiblity and how to apply for free and reduced meals.
+
 
 
 
 ## How to start environment for Developers
-
+  Simply go into folder and type: hs
+  
 ## Technologies
-Built using Angularjs
+Built using Angularjs, twitter bootstrap, jQuery, AJAX, $https
 
 ## Resources
  Counter Resource:
