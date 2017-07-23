@@ -29,7 +29,7 @@ function RouterFunction($stateProvider){
     controllerAs: "vm"
   })
   .state("home", {
-    url: "/*",
+    url: "/",
     templateUrl: "js-angular/ng-views/home.html"
   })
 
