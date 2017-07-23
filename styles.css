@@ -1,7 +1,33 @@
+main {
+  margin: 0 40px;
+}
+.wholepage {
+  width: 100%;
+  height: 120%;
+  margin-top: -90px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: rgba(0,0,0,0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.wholepage::after {
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
 .countersContainer {
   display: flex;
   flex-wrap:wrap;
-  margin: 20px auto;
+  margin: 20px 10%;
+  justify-content: center;
 }
 
 .counter {
@@ -17,13 +43,20 @@
   align-items: center;
 }
 body {
+  background: url("http://i.huffpost.com/gadgets/slideshows/405630/slide_405630_5063818_free.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-color: white;
-  color: rgb(103,103,103);
-  max-width:800px;
-  margin: 100px auto 0;
+  color: white;
+  margin:  0 auto;
+  margin-top: 90px;
   text-align: center;
   display: table;
 }
+
+
 
 .counterbox {
   margin: 0 15px;
@@ -43,14 +76,22 @@ body {
 }
 
 button {
-
+     border: 2px solid;
+     border-radius: 25px;
+}
+button:hover {
+  background-color: teal;
 }
 /* allows for video to resize according to screen size */
 .videoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 56.25%;
+    margin: 10px auto;
 }
 .video {
     position: absolute;
