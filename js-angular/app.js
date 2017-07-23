@@ -5,9 +5,7 @@ angular
   ])
   .config(["$stateProvider", RouterFunction])
 
-  .controller("AboutCtrl",[
-    aboutControllerFunction
-  ])
+  .controller("AboutCtrl",[])
   .controller("LunchIndexCtrl", [
     "$http",
     "$scope",
@@ -20,19 +18,20 @@ function RouterFunction($stateProvider){
   $stateProvider
   .state("about", {
     url: "/about",
-    templateUrl: "js/ng-views/about.html",
+    templateUrl: "js-angular/ng-views/about.html",
     controller: "AboutCtrl",
     controllerAs: "vm"
   })
   .state("lunchIndex",{
     url: "/mdfacts",
-    templateUrl: "js/ng-views/index.html",
+    templateUrl: "js-angular/ng-views/index.html",
     controller: "LunchIndexCtrl",
     controllerAs: "vm"
   })
-}
-
-function aboutControllerFunction(){
+  .state("home", {
+    url: "/*",
+    templateUrl: "js-angular/ng-views/home.html"
+  })
 
 }
 
