@@ -25,7 +25,7 @@ function RouterFunction($stateProvider){
     controllerAs: "vm"
   })
   .state("lunchIndex",{
-    url: "/mdlunches",
+    url: "/mdfacts",
     templateUrl: "js/ng-views/index.html",
     controller: "LunchIndexCtrl",
     controllerAs: "vm"
